@@ -19,4 +19,3 @@ libraryDependencies  ++= Seq(
 )
 
 
-seq(Revolver.settings: _*)
