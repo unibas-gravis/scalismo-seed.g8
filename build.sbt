@@ -1,7 +1,7 @@
 organization  := "ch.unibas.cs.gravis"
 
 name := """minimal-scalismo-seed"""
-version       := "0.1"
+version       := "0.2"
 
 scalaVersion  := "2.10.4"
 
@@ -15,7 +15,7 @@ resolvers += Opts.resolver.sonatypeSnapshots
 libraryDependencies  ++= Seq(
             "ch.unibas.cs.gravis" %% "scalismo" % "0.7.0",
             "ch.unibas.cs.gravis" % "scalismo-native-all" % "2.0.+",
-            "ch.unibas.cs.gravis" %% "scalismo-ui" % "develop-SNAPSHOT" 
+            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.3.0" 
 )
 
 
