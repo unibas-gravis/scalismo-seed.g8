@@ -5,7 +5,6 @@ import scalismo.geometry._
 import scalismo.image.DiscreteImageDomain
 import scalismo.image.DiscreteScalarImage
 import scalismo.ui.api.SimpleAPI.ScalismoUI
-import ScalarArray.implicits._
 
 
 object ExampleApp {
