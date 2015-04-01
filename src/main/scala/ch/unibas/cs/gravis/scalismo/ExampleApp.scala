@@ -1,9 +1,12 @@
 package ch.unibas.cs.gravis.scalismo
 
+import scalismo.common.ScalarArray
 import scalismo.geometry._
 import scalismo.image.DiscreteImageDomain
 import scalismo.image.DiscreteScalarImage
 import scalismo.ui.api.SimpleAPI.ScalismoUI
+import ScalarArray.implicits._
+
 
 object ExampleApp {
 
@@ -18,7 +21,6 @@ object ExampleApp {
       case (p, i) =>
         if (imageDomain.index(i)(0) % 10 < 3 && imageDomain.index(i)(1) % 10 < 3) 200 else 0
     }
-
     val image = DiscreteScalarImage(imageDomain, values.toArray)
 
     // create a visualization window 
