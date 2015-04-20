@@ -14,7 +14,7 @@ resolvers += Opts.resolver.sonatypeSnapshots
 
 libraryDependencies  ++= Seq(
             "ch.unibas.cs.gravis" %% "scalismo" % "course-SNAPSHOT",
-            "ch.unibas.cs.gravis" % "scalismo-native-all" % "2.0.+",
+            "ch.unibas.cs.gravis" % "scalismo-native-all" % "2.1.+",
             "ch.unibas.cs.gravis" %% "scalismo-ui" % "course-SNAPSHOT" 
 )
 
