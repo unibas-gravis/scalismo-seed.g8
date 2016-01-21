@@ -13,7 +13,7 @@ object ExampleApp {
     // Your application code goes here. Below is a dummy application that creates a layered image and displays it  
     scalismo.initialize()
     
-    val imageDomain = DiscreteImageDomain(Point(0f, 0f, 0f), Vector(1f, 1f, 1f), Index(100, 100, 100))
+    val imageDomain = DiscreteImageDomain(Point(0f, 0f, 0f), Vector(1f, 1f, 1f), IntVector(100, 100, 100))
 
     val values = imageDomain.points.zipWithIndex.map {
       case (p, i) =>
