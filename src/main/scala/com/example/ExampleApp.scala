@@ -1,6 +1,5 @@
-package ch.unibas.cs.gravis.scalismo
+package com.example
 
-import scalismo.image.{DiscreteImageDomain, DiscreteScalarImage}
 import scalismo.io.MeshIO
 import scalismo.ui.api.SimpleAPI.ScalismoUI
 import java.io.File
