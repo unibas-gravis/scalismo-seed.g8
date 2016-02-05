@@ -1,29 +1,27 @@
 package ch.unibas.cs.gravis.scalismo
 
-import scalismo.common._
-import scalismo.geometry._
 import scalismo.image.{DiscreteImageDomain, DiscreteScalarImage}
+import scalismo.io.MeshIO
 import scalismo.ui.api.SimpleAPI.ScalismoUI
-
+import java.io.File
 
 object ExampleApp {
 
   def main(args: Array[String]) {
     
-    // Your application code goes here. Below is a dummy application that creates a layered image and displays it  
+    // required to initialize native libraries (VTK, HDF5 ..)
     scalismo.initialize()
     
-    val imageDomain = DiscreteImageDomain(Point(0f, 0f, 0f), Vector(1f, 1f, 1f), IntVector(100, 100, 100))
+    // Your application code goes below here. Below is a dummy application that reads a mesh and displays it
 
-    val values = imageDomain.points.zipWithIndex.map {
-      case (p, i) =>
-        if (imageDomain.index(PointId(i))(0) % 10 < 3 && imageDomain.index(PointId(i))(1) % 10 < 3) 200 else 0
-    }
-    val image = DiscreteScalarImage(imageDomain, ScalarArray(values.toArray))
-
-    // create a visualization window 
+    // create a visualization window
     val ui = ScalismoUI()
-    ui.show(image, "grid")
+
+    // read a mesh from file
+    val mesh = MeshIO.readMesh(new File("data/facemesh.stl")).get
+
+    // display it
+    ui.show(mesh, "face")
 
   }
 }
