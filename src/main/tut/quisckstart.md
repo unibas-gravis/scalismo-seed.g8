@@ -7,7 +7,7 @@ In this quickstart guide, we will guide you through the task of creating shape m
 
 The example code below can be run in two ways:
 
-* To run in the REPL: run "sbt console" from the project's root and copy paste the bits of code below into the REPL
+* To run in the REPL: type ```console``` in the sbt prompt and copy paste the bits of code below into the REPL
 
 * To run in a standalone application: copy the bits of code below into a file similar to [this example](https://github.com/unibas-gravis/activator-scalismo-seed/blob/master/src/main/scala/ch/unibas/cs/gravis/scalismo/ExampleApp.scala).
 

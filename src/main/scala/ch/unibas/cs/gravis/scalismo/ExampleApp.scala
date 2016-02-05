@@ -11,7 +11,7 @@ object ExampleApp {
     
     // required to initialize native libraries (VTK, HDF5 ..)
     scalismo.initialize()
-    
+
     // Your application code goes below here. Below is a dummy application that reads a mesh and displays it
 
     // create a visualization window
