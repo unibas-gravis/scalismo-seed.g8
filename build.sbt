@@ -18,4 +18,3 @@ libraryDependencies  ++= Seq(
             "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.6.+" 
 )
 
-tutSettings
