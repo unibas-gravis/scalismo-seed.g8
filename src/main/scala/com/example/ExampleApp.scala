@@ -1,8 +1,11 @@
 package com.example
 
+import java.awt.Color
+
 import scalismo.io.MeshIO
-import scalismo.ui.api.SimpleAPI.ScalismoUI
 import java.io.File
+
+import scalismo.ui.api.ScalismoUI
 
 object ExampleApp {
 
@@ -20,7 +23,10 @@ object ExampleApp {
     val mesh = MeshIO.readMesh(new File("data/facemesh.stl")).get
 
     // display it
-    ui.show(mesh, "face")
+    val meshView = ui.show(mesh, "face")
+
+    // change its color
+    meshView.color = Color.PINK
 
   }
 }
