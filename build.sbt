@@ -1,7 +1,7 @@
 organization  := "ch.unibas.cs.gravis"
 
 name := """minimal-scalismo-seed"""
-version       := "0.3"
+version       := "0.4"
 
 scalaVersion  := "2.11.7"
 
@@ -13,9 +13,9 @@ resolvers += Opts.resolver.sonatypeSnapshots
 
 
 libraryDependencies  ++= Seq(
-            "ch.unibas.cs.gravis" %% "scalismo" % "0.12.+",
+            "ch.unibas.cs.gravis" %% "scalismo" % "0.13.+",
             "ch.unibas.cs.gravis" % "scalismo-native-all" % "3.0.+",
-            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.8.+" 
+            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.9.+" 
 )
 
 jarName in assembly := "exectuable.jar"
