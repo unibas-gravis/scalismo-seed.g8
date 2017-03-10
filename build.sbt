@@ -18,12 +18,12 @@ libraryDependencies  ++= Seq(
             "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.10.+" 
 )
 
-jarName in assembly := "exectuable.jar"
+assemblyJarName in assembly := "exectuable.jar"
 
 mainClass in assembly := Some("com.example.ExampleApp")
 
 
-mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
+assemblyMergeStrategy in assembly <<= (assemblyMergeStrategy in assembly) { (old) =>
   {
     case PathList("META-INF", "MANIFEST.MF") => MergeStrategy.discard
     case PathList("META-INF", s) if s.endsWith(".SF") || s.endsWith(".DSA") || s.endsWith(".RSA") => MergeStrategy.discard
