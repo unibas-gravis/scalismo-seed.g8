@@ -1,21 +1,21 @@
 organization  := "ch.unibas.cs.gravis"
 
 name := """minimal-scalismo-seed"""
-version       := "0.4"
+version       := "0.5"
 
 scalaVersion  := "2.11.7"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
-resolvers += "Statismo (public)" at "http://shapemodelling.cs.unibas.ch/repository/public"  
+resolvers += Resolver.bintrayRepo("unibas-gravis", "maven")
 
-resolvers += Opts.resolver.sonatypeSnapshots 
+resolvers += Opts.resolver.sonatypeSnapshots
 
 
 libraryDependencies  ++= Seq(
-            "ch.unibas.cs.gravis" %% "scalismo" % "0.14.+",
+            "ch.unibas.cs.gravis" %% "scalismo" % "0.15.+",
             "ch.unibas.cs.gravis" % "scalismo-native-all" % "3.0.+",
-            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.10.+" 
+            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.11.+"
 )
 
 assemblyJarName in assembly := "exectuable.jar"
@@ -31,5 +31,3 @@ assemblyMergeStrategy in assembly <<= (assemblyMergeStrategy in assembly) { (old
     case _ => MergeStrategy.first
   }
 }
-
-
