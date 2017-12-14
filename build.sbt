@@ -13,9 +13,9 @@ resolvers += Opts.resolver.sonatypeSnapshots
 
 
 libraryDependencies  ++= Seq(
-            "ch.unibas.cs.gravis" %% "scalismo" % "0.15.+",
-            "ch.unibas.cs.gravis" % "scalismo-native-all" % "3.0.+",
-            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.11.+"
+            "ch.unibas.cs.gravis" %% "scalismo" % "0.16.+",
+            "ch.unibas.cs.gravis" % "scalismo-native-all" % "4.0.+",
+            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.12.+"
 )
 
 assemblyJarName in assembly := "exectuable.jar"
