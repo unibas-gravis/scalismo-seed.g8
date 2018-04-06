@@ -18,7 +18,7 @@ libraryDependencies  ++= Seq(
             "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.12.+"
 )
 
-assemblyJarName in assembly := "exectuable.jar"
+assemblyJarName in assembly := "executable.jar"
 
 mainClass in assembly := Some("com.example.ExampleApp")
 
