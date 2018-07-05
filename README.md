@@ -10,10 +10,10 @@ To compile your application as an executable Jar, you can use the assembly comma
 ~~~
 sbt assembly
 ~~~
-This will dump an executable jar file in the target/scala-2.11/ directory. To run the jar:
+This will dump an executable jar file in the target/scala-2.12/ directory. To run the jar:
 
 ~~~
-java -jar target/scala-2.11/executable.jar
+java -jar target/scala-2.12/executable.jar
 ~~~
 
 The name as well as the Main class to be used for the executable jar can be changed in the [build.sbt](https://github.com/unibas-gravis/minimal-scalismo-seed/blob/master/build.sbt) file
