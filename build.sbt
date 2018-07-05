@@ -1,9 +1,9 @@
 organization  := "ch.unibas.cs.gravis"
 
 name := """minimal-scalismo-seed"""
-version       := "0.5"
+version       := "0.6"
 
-scalaVersion  := "2.11.7"
+scalaVersion  := "2.12.6"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
