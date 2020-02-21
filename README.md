@@ -1,12 +1,17 @@
-# minimal-scalismo-seed
-A minimal seed template for a [Scalismo](https://github.com/unibas-gravis/scalismo) build.
+# scalismo-seed.g8
+A minimal seed template for a project using [Scalismo](https://github.com/unibas-gravis/scalismo).
 
-Once you have [sbt](http://www.scala-sbt.org/release/tutorial/Setup.html) installed, you can clone this project to build an application making use of Scalismo. A very simple example application is shown in [ExampleApp.scala](https://github.com/unibas-gravis/activator-scalismo-seed/blob/master/src/main/scala/com/example/ExampleApp.scala).
+Once you have [sbt](http://www.scala-sbt.org/release/tutorial/Setup.html) installed, you can run the command:
+~~~
+sbt new unibas-gravis/scalismo-seed.g8
+~~~
 
-Once the project installed, you can also check the [quickstart](https://github.com/unibas-gravis/scalismo/wiki/quickstart) guide for a quick tour of Scalismo's capabilities.
+You will be asked for the name of your new project that will be created for you.
+
+Once the project is created, you can also check the general [tutorial](https://scalismo.org/tutorials.html) for a quick tour of Scalismo's capabilities or checkout how to use scalismo in an [IDE](https://scalismo.org/tutorials/ide.html).
 
 ### Compiling executable jars
-To compile your application as an executable Jar, you can use the assembly command:
+To compile your application as an executable Jar, you should change into the created projects directory, if you have not already. Then you can use the assembly command:
 ~~~
 sbt assembly
 ~~~
