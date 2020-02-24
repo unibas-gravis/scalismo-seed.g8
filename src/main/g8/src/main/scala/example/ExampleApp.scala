@@ -11,6 +11,9 @@ object ExampleApp {
 
     def main(args: Array[String]) {
 
+      // setting a seed for the random generator to allow for reproducible results
+      implicit val rng = scalismo.utils.Random(42)
+
       // required to initialize native libraries (VTK, HDF5 ..)
       scalismo.initialize()
 
