@@ -6,7 +6,7 @@ name := "$name$"
 
 version       := "0.1"
 
-scalaVersion  := "2.12.8"
+scalaVersion  := "2.13.3"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -19,7 +19,7 @@ resolvers ++= Seq(
 
 libraryDependencies  ++= Seq(
             "ch.unibas.cs.gravis" % "scalismo-native-all" % "4.0.+",
-            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.14-RC1",
+            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.90.0",
             "com.cibo" %% "evilplot" % "0.6.3"
 )
 
