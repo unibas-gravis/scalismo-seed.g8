@@ -9,7 +9,7 @@ import scalismo.ui.api.ScalismoUI
 
 object ExampleApp {
 
-    def main(args: Array[String]) {
+    def main(args: Array[String]) : Unit = {
 
       // setting a seed for the random generator to allow for reproducible results
       implicit val rng = scalismo.utils.Random(42)
