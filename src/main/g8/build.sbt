@@ -11,7 +11,6 @@ scalaVersion  := "2.13.3"
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
 resolvers ++= Seq(
-  Resolver.bintrayRepo("unibas-gravis", "maven"),
   Resolver.bintrayRepo("cibotech", "public"),
   Opts.resolver.sonatypeSnapshots
 )
