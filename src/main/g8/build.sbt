@@ -11,7 +11,6 @@ scalaVersion  := "2.13.3"
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
 resolvers ++= Seq(
-  Resolver.bintrayRepo("cibotech", "public"),
   Opts.resolver.sonatypeSnapshots
 )
 
@@ -19,7 +18,7 @@ resolvers ++= Seq(
 libraryDependencies  ++= Seq(
             "ch.unibas.cs.gravis" % "scalismo-native-all" % "4.0.+",
             "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.90.0",
-            "com.cibo" %% "evilplot" % "0.8.0"
+            "io.github.cibotech" %% "evilplot" % "0.8.1"
 )
 
 assemblyJarName in assembly := "$name$.jar"
