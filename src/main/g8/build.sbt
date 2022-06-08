@@ -6,7 +6,7 @@ name := "$name$"
 
 version       := "0.1"
 
-scalaVersion  := "2.13.3"
+scalaVersion  := "3.1.1"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -16,16 +16,14 @@ resolvers ++= Seq(
 
 
 libraryDependencies  ++= Seq(
-            "ch.unibas.cs.gravis" % "scalismo-native-all" % "4.0.+",
-            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.90.0",
-            "io.github.cibotech" %% "evilplot" % "0.8.1"
+            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.91.0"
 )
 
-assemblyJarName in assembly := "$name$.jar"
+assembly/assemblyJarName := "$name$.jar"
 
-mainClass in assembly := Some("example.ExampleApp")
+assembly/mainClass  := Some("example.ExampleApp")
 
-assemblyMergeStrategy in assembly :=  {
+assembly/assemblyMergeStrategy :=  {
     case PathList("META-INF", "MANIFEST.MF") => MergeStrategy.discard
     case PathList("META-INF", s) if s.endsWith(".SF") || s.endsWith(".DSA") || s.endsWith(".RSA") => MergeStrategy.discard
     case "reference.conf" => MergeStrategy.concat
