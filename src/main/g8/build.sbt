@@ -6,7 +6,7 @@ name := "$name$"
 
 version       := "0.1"
 
-scalaVersion  := "3.1.1"
+scalaVersion  := "3.3.0"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -14,18 +14,22 @@ resolvers ++= Seq(
   Opts.resolver.sonatypeSnapshots
 )
 
-
 libraryDependencies  ++= Seq(
-            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.91.0"
+            "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.92.0"
 )
 
 assembly/assemblyJarName := "$name$.jar"
-
 assembly/mainClass  := Some("example.ExampleApp")
-
-assembly/assemblyMergeStrategy :=  {
-    case PathList("META-INF", "MANIFEST.MF") => MergeStrategy.discard
-    case PathList("META-INF", s) if s.endsWith(".SF") || s.endsWith(".DSA") || s.endsWith(".RSA") => MergeStrategy.discard
-    case "reference.conf" => MergeStrategy.concat
-    case _ => MergeStrategy.first
-}
+assembly / assemblyMergeStrategy := {
+      case PathList("META-INF", xs @ _*) =>
+        (xs map { _.toLowerCase }) match {
+          case ("manifest.mf" :: Nil) | ("index.list" :: Nil) | ("dependencies" :: Nil) =>
+            MergeStrategy.discard
+          case ps @ (x :: xs) if ps.last.endsWith(".sf") || ps.last.endsWith(".dsa") =>
+            MergeStrategy.discard
+          case "services" :: xs =>
+            MergeStrategy.filterDistinctLines
+          case _ => MergeStrategy.first
+        }
+      case _ => MergeStrategy.first
+    }

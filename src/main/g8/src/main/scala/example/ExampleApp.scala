@@ -1,34 +1,28 @@
 package example
 
-
 import java.awt.Color
+import java.io.File
 
 import scalismo.io.MeshIO
-import java.io.File
 import scalismo.ui.api.ScalismoUI
+import scalismo.utils.Random.FixedSeed
 
-object ExampleApp {
+object ExampleApp extends App:
 
-    def main(args: Array[String]) : Unit = {
+  // required to initialize native libraries (VTK, HDF5 ..)
+  scalismo.initialize()
 
-      // setting a seed for the random generator to allow for reproducible results
-      implicit val rng = scalismo.utils.Random(42)
+  // Your application code goes below here. Below is a dummy application that reads a mesh and displays it
 
-      // required to initialize native libraries (VTK, HDF5 ..)
-      scalismo.initialize()
+  // create a visualization window
+  val ui = ScalismoUI()
 
-      // Your application code goes below here. Below is a dummy application that reads a mesh and displays it
+  // read a mesh from file
+  val mesh = MeshIO.readMesh(new File("data/facemesh.ply")).get
 
-      // create a visualization window
-      val ui = ScalismoUI()
+  // display it
+  val meshView = ui.show(mesh, "face")
 
-      // read a mesh from file
-      val mesh = MeshIO.readMesh(new File("data/facemesh.ply")).get
-
-      // display it
-      val meshView = ui.show(mesh, "face")
-
-      // change its color
-      meshView.color = Color.PINK
-  }
-}
+  // change its color
+  meshView.color = Color.PINK
+  
